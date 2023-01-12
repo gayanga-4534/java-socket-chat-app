@@ -85,13 +85,61 @@ public class Main extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private ServerSocket server;
+    private Thread run;
 
+    private void startServer() throws Exception {
+        Method.setClients(new ArrayList<>());
+        File f = new File("data");
+        for (File fs : f.listFiles()) {
+            fs.delete();
+        }
+        run = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    server = new ServerSocket(5000);
+                    lbStatus.setForeground(Color.GREEN);
+                    Method.setTxt(txt);
+                    txt.setText("Server now Starting ...\n");
+                    while (true) {
+                        new Client(server.accept());
+                    }
+                } catch (Exception e) {
+                    JOptionPane.showMessageDialog(Main.this, e, "Error", JOptionPane.ERROR_MESSAGE);
+                    //e.printStackTrace();
+                }
+            }
+        });
+        run.start();
+    }
+
+    private void stopServer() throws Exception {
+        int c = JOptionPane.showConfirmDialog(this, "Are you sure to stop server now", "Sotop Server", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if (c == JOptionPane.YES_OPTION) {
+            lbStatus.setForeground(new Color(255, 51, 51));
+            txt.setText("Server now Stoped ...");
+            run.interrupt();
+            server.close();
+        }
+    }
     private void cmdStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdStartActionPerformed
-
+        try {
+            int c = JOptionPane.showConfirmDialog(this, "File in data will be delete when server is start", "Start Server", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+            if (c == JOptionPane.YES_OPTION) {
+                startServer();
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e, "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_cmdStartActionPerformed
 
     private void cmdStopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdStopActionPerformed
-
+        try {
+            stopServer();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e, "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_cmdStopActionPerformed
 
     public static void main(String args[]) {
