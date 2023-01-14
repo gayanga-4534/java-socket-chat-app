@@ -3,20 +3,31 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/java-group-chat-master4/Client/src/my_swing/Send_Photo_Box.java</file>
-            <file>file:/D:/java-group-chat-master4/Client/src/my_swing/Emoji.java</file>
-            <file>file:/D:/java-group-chat-master4/Client/src/main/Main.java</file>
-            <file>file:/D:/java-group-chat-master4/Client/src/my_swing/Friend_Box.java</file>
-            <file>file:/D:/java-group-chat-master4/Client/src/my_swing/Get_File.java</file>
-            <file>file:/D:/java-group-chat-master4/Client/src/my_swing/Get_Box_New.java</file>
-            <file>file:/D:/java-group-chat-master4/Client/src/function/Method.java</file>
-            <file>file:/D:/java-group-chat-master4/Client/src/my_swing/Get_Emoji_New.java</file>
-            <file>file:/D:/java-group-chat-master4/Client/src/my_swing/Send_File.java</file>
-            <file>file:/D:/java-group-chat-master4/Client/src/my_swing/Get_Box.java</file>
-            <file>file:/D:/java-group-chat-master4/Client/src/my_swing/Send_Photo_Box_New.java</file>
-            <file>file:/D:/java-group-chat-master4/Client/src/my_swing/Get_Sound.java</file>
-            <file>file:/D:/java-group-chat-master4/Client/src/my_swing/Get_Emoji.java</file>
-            <file>file:/D:/java-group-chat-master4/Client/src/model/Friend.java</file>
+            <file>file:/D:/java-group-chat-master5/Client/src/my_swing/Send_Emoji.java</file>
+            <file>file:/D:/java-group-chat-master5/Client/src/my_swing/Get_File.java</file>
+            <file>file:/D:/java-group-chat-master5/Client/src/my_swing/Panel.java</file>
+            <file>file:/D:/java-group-chat-master5/Client/src/my_swing/Get_Box_New.java</file>
+            <file>file:/D:/java-group-chat-master5/Client/src/my_swing/Send_File_New.java</file>
+            <file>file:/D:/java-group-chat-master5/Client/src/my_swing/ImageViewer.java</file>
+            <file>file:/D:/java-group-chat-master5/Client/src/my_swing/Get_Photo_Box_New.java</file>
+            <file>file:/D:/java-group-chat-master5/Client/src/my_swing/Get_File_New.java</file>
+            <file>file:/D:/java-group-chat-master5/Client/src/my_swing/Get_Photo_Box.java</file>
+            <file>file:/D:/java-group-chat-master5/Client/src/main/Main.java</file>
+            <file>file:/D:/java-group-chat-master5/Client/src/my_swing/Get_Emoji_New.java</file>
+            <file>file:/D:/java-group-chat-master5/Client/src/my_swing/Send_File.java</file>
+            <file>file:/D:/java-group-chat-master5/Client/src/my_swing/Get_Sound_New.java</file>
+            <file>file:/D:/java-group-chat-master5/Client/src/my_swing/Send_Photo_Box_New.java</file>
+            <file>file:/D:/java-group-chat-master5/Client/src/my_swing/Get_Emoji.java</file>
+            <file>file:/D:/java-group-chat-master5/Client/src/my_swing/Send_Emoji_New.java</file>
+            <file>file:/D:/java-group-chat-master5/Client/src/my_swing/Send_Photo_Box.java</file>
+            <file>file:/D:/java-group-chat-master5/Client/src/my_swing/Get_Sound.java</file>
+            <file>file:/D:/java-group-chat-master5/Client/src/my_swing/Emoji.java</file>
+            <file>file:/D:/java-group-chat-master5/Client/src/model/Friend.java</file>
+            <file>file:/D:/java-group-chat-master5/Client/src/my_swing/Send_Box.java</file>
+            <file>file:/D:/java-group-chat-master5/Client/src/my_swing/Friend_Box.java</file>
+            <file>file:/D:/java-group-chat-master5/Client/src/my_swing/Get_Box.java</file>
+            <file>file:/D:/java-group-chat-master5/Client/src/my_swing/Button.java</file>
+            <file>file:/D:/java-group-chat-master5/Client/src/my_swing/Send_Box_New.java</file>
         </group>
     </open-files>
 </project-private>
