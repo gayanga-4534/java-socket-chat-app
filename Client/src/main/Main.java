@@ -75,6 +75,7 @@ public class Main extends javax.swing.JFrame {
             @Override
             public void actionPerformed(ActionEvent ae) {
              
+	           setEmoji(eg1);
             }
         });
         panelGroup.add(eg1);
@@ -99,7 +100,7 @@ public class Main extends javax.swing.JFrame {
             }
         });
         panelGroup.add(eg2);
-      
+      setEmoji(eg1);
     }
 
     @SuppressWarnings("unchecked")
@@ -502,7 +503,21 @@ public class Main extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-
+    private void setEmoji(Emoji_Group eg1) {
+        panelEmoji.removeAll();
+        for (int i = 1; i <= eg1.getIcons(); i++) {
+            Emoji emo = new Emoji(eg1.getName() + " (" + i + ").png");
+            emo.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent ae) {
+                    setEmoji(emo.getName());
+                }
+            });
+            panelEmoji.add(emo);
+        }
+        panelEmoji.revalidate();
+        panelEmoji.repaint();
+    }
     private void cmdSendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdSendActionPerformed
         if (txt.getName().equals("have") && !txt.getText().equals("")) {
             try {
