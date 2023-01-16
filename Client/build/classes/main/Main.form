@@ -449,7 +449,7 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="title" type="java.lang.String" value="Khmer Chat"/>
+    <Property name="title" type="java.lang.String" value="Play Tech Pvt Ltd"/>
     <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
@@ -481,7 +481,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <Component id="panel_bg" max="32767" attributes="0"/>
-              <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -535,20 +535,19 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbStatus" alignment="1" max="32767" attributes="0"/>
+                      <Component id="lbStatus" alignment="1" pref="24" max="32767" attributes="0"/>
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="spFriend" min="-2" pref="412" max="-2" attributes="0"/>
-                      <Component id="spChat" max="32767" attributes="0"/>
+                      <Component id="spChat" pref="415" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="txt" max="32767" attributes="0"/>
-                      <Component id="cmdMore" max="32767" attributes="0"/>
+                      <Component id="cmdMore" pref="30" max="32767" attributes="0"/>
                       <Component id="cmdSend" alignment="0" max="32767" attributes="0"/>
                       <Component id="cmdLogOut" alignment="0" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
