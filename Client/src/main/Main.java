@@ -1,8 +1,8 @@
 package main;
 
-
+import function.FileChooser;
 import function.Method;
-
+import function.Scrolling;
 import java.awt.Adjustable;
 import java.awt.Color;
 import java.awt.Component;
@@ -64,7 +64,8 @@ public class Main extends javax.swing.JFrame {
         popMix.add(panelMix);
         popMix.setBackground(new Color(0, 0, 0, 0));
         Method.setFram(this);
-     
+        new Scrolling(panelChat);
+        new Scrolling(panelFriend);
         Method.setTextFieldSyle(txt, "Type a message here ...");
         for (int i = 0; i < 10; i++) {
             cmdSendActionPerformed(null);
@@ -74,8 +75,7 @@ public class Main extends javax.swing.JFrame {
         eg1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
-             
-	           setEmoji(eg1);
+                setEmoji(eg1);
             }
         });
         panelGroup.add(eg1);
@@ -90,7 +90,7 @@ public class Main extends javax.swing.JFrame {
                     emo.addActionListener(new ActionListener() {
                         @Override
                         public void actionPerformed(ActionEvent ae) {
-                         
+                            setEmoji(emo.getName());
                         }
                     });
                     panelEmoji.add(emo);
@@ -100,7 +100,7 @@ public class Main extends javax.swing.JFrame {
             }
         });
         panelGroup.add(eg2);
-      setEmoji(eg1);
+        setEmoji(eg1);
     }
 
     @SuppressWarnings("unchecked")
@@ -454,12 +454,12 @@ public class Main extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panel_bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_bgLayout.createSequentialGroup()
-                        .addComponent(txt, javax.swing.GroupLayout.DEFAULT_SIZE, 516, Short.MAX_VALUE)
+                        .addComponent(txt)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(cmdMore)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(cmdSend, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(spChat, javax.swing.GroupLayout.DEFAULT_SIZE, 625, Short.MAX_VALUE)
+                    .addComponent(spChat)
                     .addGroup(panel_bgLayout.createSequentialGroup()
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -490,7 +490,7 @@ public class Main extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel_bg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panel_bg, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -614,14 +614,14 @@ public class Main extends javax.swing.JFrame {
     private void cmdMixMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cmdMixMousePressed
         cmdMix.setBackground(new Color(94, 197, 95));
         cmdMix.setText("Starting");
-      
+
     }//GEN-LAST:event_cmdMixMousePressed
 
     private void cmdMixMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cmdMixMouseReleased
         try {
             cmdMix.setBackground(new Color(242, 67, 67));
             cmdMix.setText("Start");
-        
+      
             popMix.setVisible(false);
         } catch (Exception e) {
             showStatus("Error : " + e.getMessage());
@@ -762,7 +762,8 @@ public class Main extends javax.swing.JFrame {
     private void getSound(int ID, byte[] sound, String time) {
         if (ID == Method.getMyID()) {
             if (ID == currentID) {
-              
+           
+      
             } else {
         
             }
@@ -819,8 +820,9 @@ public class Main extends javax.swing.JFrame {
 
     private void setImage() {
         JFileChooser ch = new JFileChooser();
-    
-    
+        FileChooser preview = new FileChooser();
+        ch.setAccessory(preview);
+        ch.addPropertyChangeListener(preview);
         ch.setFileFilter(new FileFilter() {
             @Override
             public boolean accept(File file) {
@@ -846,8 +848,9 @@ public class Main extends javax.swing.JFrame {
 
     private void setFile() throws Exception {
         JFileChooser ch = new JFileChooser();
-       
-  ;
+        FileChooser preview = new FileChooser();
+        ch.setAccessory(preview);
+        ch.addPropertyChangeListener(preview);
         int c = ch.showOpenDialog(this);
         if (c == JFileChooser.APPROVE_OPTION) {
             Method.sendFile(ch.getSelectedFile());

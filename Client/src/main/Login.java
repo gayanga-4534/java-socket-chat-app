@@ -1,6 +1,7 @@
 package main;
 
 
+import main.Main;
 import function.Method;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
